@@ -23,9 +23,6 @@ public class Game {
         this.userO = userO;
     }
 
-    public void setUserX(User user) {
-        this.userX = user;
-    }
 
     public void runGame() {
         board.init();

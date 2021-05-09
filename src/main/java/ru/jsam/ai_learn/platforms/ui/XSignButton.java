@@ -1,4 +1,4 @@
-package ru.jsam.ai_learn.ui;
+package ru.jsam.ai_learn.platforms.ui;
 
 import javax.swing.*;
 

@@ -16,7 +16,7 @@ public class Main {
 
         Platform platform = new UIPlatform();
 
-        User userX = new RealUser(platform);
+        User userX = new AIBotUser("/home/user/model", SIGN.X, true); new RealUser(platform);
         User userO = new AIBotUser("/home/shamil/dl4j-examples-data/model", SIGN.O, false);
         Board board = new BoardImpl();
 

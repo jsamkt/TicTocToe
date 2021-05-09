@@ -4,8 +4,6 @@ import ru.jsam.ai_learn.SIGN;
 
 public interface Platform {
 
-//    SIGN choseSide();
-
     void inviteUserToTurn(SIGN t);
     void draw(SIGN[] board);
     int getUserTurn();

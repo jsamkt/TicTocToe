@@ -11,7 +11,10 @@ import ru.jsam.ai_learn.SIGN;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -144,11 +147,6 @@ public class AIBotUser extends BotUser {
         return resultIndex;
     }
 
-    private int randomTurn(int[] board) {
-        List<Integer> indexes = getFreeIndexes(board);
-        return indexes.get(new Random().nextInt(indexes.size()));
-    }
-
 
     private static INDArray mapBoardToINDArray(int[] board) {
         float[] _board = new float[board.length];
@@ -158,15 +156,4 @@ public class AIBotUser extends BotUser {
         return Nd4j.create(_board, 1, 9);
     }
 
-    private static boolean isPositive(INDArray out) {
-        return getMaxIndex(out) == 1;
-    }
-
-    private static int getMaxIndex(INDArray out) {
-        if (out.getFloat(0, 0) > out.getFloat(0, 1)) {
-            return 0;
-        } else {
-            return 1;
-        }
-    }
 }

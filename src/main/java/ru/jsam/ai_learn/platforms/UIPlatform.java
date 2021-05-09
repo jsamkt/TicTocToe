@@ -1,9 +1,9 @@
 package ru.jsam.ai_learn.platforms;
 
 import ru.jsam.ai_learn.SIGN;
-import ru.jsam.ai_learn.ui.OSignButton;
-import ru.jsam.ai_learn.ui.SpaceSignButton;
-import ru.jsam.ai_learn.ui.XSignButton;
+import ru.jsam.ai_learn.platforms.ui.OSignButton;
+import ru.jsam.ai_learn.platforms.ui.SpaceSignButton;
+import ru.jsam.ai_learn.platforms.ui.XSignButton;
 
 import javax.swing.*;
 import java.awt.*;
