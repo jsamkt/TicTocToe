@@ -114,7 +114,26 @@ for (int i = 0; i < EPOCH_NUM; i++) {
 #### AI
 > класс
 
-Класс с конфигурацией нейронной сети. 
+Класс с конфигурацией нейронной сети. \
+Используется Framework для работы с нейронными сетями на Java - [Deeplearning4j](https://deeplearning4j.org/).\
+Deeplearning4j состоит из 2х компонентов:
+* [ND4J Backend](https://deeplearning4j.konduit.ai/config/backends) - бэкенд библиотеки линейной алгебры. Запускается в одтельном процессе. Есть 2 реализации бэкенда:
+  * cuda - версия для GPU обработки. Можно использовать если установлен CUDA версии V9.2 и выше, а так же оборудование совместимо с NVIDIA.
+    ```
+      <dependency>
+        <groupId>org.nd4j</groupId>
+        <artifactId>nd4j-cuda-10.2</artifactId>
+        <version>1.0.0-beta7</version>
+      </dependency>
+    ```
+  * native - версия для CPU обработки.
+     ```
+      <dependency>
+        <groupId>org.nd4j</groupId>
+        <artifactId>nd4j-native</artifactId>
+        <version>1.0.0-beta7</version>
+      </dependency> 
+      ```
 
 Название метода                  | Описание
 ---------------------------------|-----------------------------------------------------------------------------------------
@@ -177,7 +196,6 @@ for (int i = 0; i < EPOCH_NUM; i++) {
 **AlgorithmBotUser** | ![](https://github.com/jsamkt/configurations/blob/main/images/RandomVsAlgorithm.png?raw=true) Бот среднего уровня побеждает 10 к 1.
 **MinMaxAlgorithmBotUser** | ![](https://github.com/jsamkt/configurations/blob/main/images/RandomVsMinMaxAlgorithm.png?raw=true) Алгоритм **MINIMAX** невозможно победить.
 **AIBotUser** | ![](https://github.com/jsamkt/configurations/blob/main/images/RandomVsAI.png?raw=true) Как видно нейронная сеть обучилась и выигрывает 7 к 1, при том, что, как выяснилось, у **O** в 2 раза меньше шанса на победу. Но любой из алгоритмов побеждает нейронную сеть.
-
 
 
 
