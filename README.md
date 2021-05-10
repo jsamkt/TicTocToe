@@ -116,7 +116,7 @@ for (int i = 0; i < EPOCH_NUM; i++) {
 
 Класс с конфигурацией нейронной сети. \
 Используется Framework для работы с нейронными сетями на Java - [Deeplearning4j](https://deeplearning4j.org/).\
-Deeplearning4j состоит из 2х компонентов:
+Deeplearning4j [состоит](https://deeplearning4j.konduit.ai/config/maven) из 2х компонентов:
 * [ND4J Backend](https://deeplearning4j.konduit.ai/config/backends) - бэкенд библиотеки линейной алгебры. Запускается в одтельном процессе. Есть 2 реализации бэкенда:
   * cuda - версия для GPU обработки. Можно использовать если установлен CUDA версии V9.2 и выше, а так же оборудование совместимо с NVIDIA.
     ```
@@ -134,6 +134,14 @@ Deeplearning4j состоит из 2х компонентов:
         <version>1.0.0-beta7</version>
       </dependency> 
       ```
+* Core - реализации нейронной сети
+```
+  <dependency>
+      <groupId>org.deeplearning4j</groupId>
+      <artifactId>deeplearning4j-core</artifactId>
+      <version>1.0.0-beta7</version>
+  </dependency>
+```
 
 Название метода                  | Описание
 ---------------------------------|-----------------------------------------------------------------------------------------
