@@ -168,7 +168,15 @@ for (int i = 0; i < EPOCH_NUM; i++) {
 * создает **Game**: `Game game = new Game(platform, board, userX, userO);`
 И запусает игру в цикле: `game.runGame();`
 
-
+### Статистика:
+Ниже представлены результаты 1000 игр. \
+В каждом случае за **X** играет **`RandomUser`**.
+Алгоритм **O** бота              | Результат
+---------------------------------|-----------------------------------------------------------------------------------------
+**RandomUser**  | ![](https://github.com/jsamkt/configurations/blob/main/images/RandomVsRandom.png?raw=true) Видим, что по статистике у **X** в 2 раза больше шанса переиграть **O**.
+**AlgorithmBotUser** | ![](https://github.com/jsamkt/configurations/blob/main/images/RandomVsAlgorithm.png?raw=true) Бот среднего уровня побеждает 10 к 1.
+**MinMaxAlgorithmBotUser** | ![](https://github.com/jsamkt/configurations/blob/main/images/RandomVsMinMaxAlgorithm.png?raw=true) Алгоритм **MINIMAX** невозможно победить.
+**AIBotUser** | ![](https://github.com/jsamkt/configurations/blob/main/images/RandomVsAI.png?raw=true) Как видно нейронная сеть обучилась и выигрывает 7 к 1, при том, что, как выяснилось, у **O** в 2 раза меньше шанса на победу. Но любой из алгоритмов побеждает нейронную сеть.
 
 
 
